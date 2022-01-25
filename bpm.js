@@ -477,8 +477,6 @@ function _init(data, info) {
             const ForPagConta = map.get("ForPagConta");
             const ForPagChavePix = map.get("ForPagChavePix");
 
-            const SupAproJusti = map.get("SupAproJusti");
-
             document.getElementById("nomFun").setAttribute("value", nomFun);
             document.getElementById("emaFun").setAttribute("value", emaFun);
             document.getElementById("selectEmpFil").value = selectEmpFil;
@@ -560,8 +558,6 @@ function _init(data, info) {
             document.getElementById("ForPagAgencia").setAttribute("value", ForPagAgencia);
             document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
             document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
-
-            document.getElementById("SupAproJusti").setAttribute("value", SupAproJusti);
 
             selecionaTipoFormulario()
             ExibeBoleto()
