@@ -137,7 +137,7 @@ function ExibeBoleto() {
 
         document.getElementById("ForPagBanco").value = ''
         document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''  
+        document.getElementById("ForPagConta").value = ''
 
 
         if (document.getElementById("VlrParUm").value != 0) {
@@ -246,7 +246,7 @@ function ExibirFormaPagamento() {
 
         document.getElementById("ForPagBanco").value = ''
         document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''        
+        document.getElementById("ForPagConta").value = ''
 
         let eVal2 = document.getElementById('PagPix');
 
@@ -287,7 +287,7 @@ function ExibirFormaPagamento() {
 
     }
     if (document.getElementById("selectFormPag").value == 'Depósito') {
-        
+
         document.getElementById("CodBolUm").value = ''
         document.getElementById("CodBolDois").value = ''
         document.getElementById("CodBolTres").value = ''
@@ -303,7 +303,7 @@ function ExibirFormaPagamento() {
 
         document.getElementById("ForPagChavePix").value = ''
 
-        
+
         let eVal = document.getElementById('PagBanco');
 
         eVal.style.display = 'flex';
@@ -406,7 +406,7 @@ function _init(data, info) {
             const Proj = map.get("Proj");
             const ConFin = map.get("ConFin");
             const CenCus = map.get("CenCus");
-            
+
             const NumNf = map.get("NumNf");
             const DatPre = map.get("DatPre");
             const ObsPag = map.get("ObsPag");
@@ -476,6 +476,8 @@ function _init(data, info) {
             const ForPagAgencia = map.get("ForPagAgencia");
             const ForPagConta = map.get("ForPagConta");
             const ForPagChavePix = map.get("ForPagChavePix");
+
+            const SupAproJusti = map.get("SupAproJusti");
 
             document.getElementById("nomFun").setAttribute("value", nomFun);
             document.getElementById("emaFun").setAttribute("value", emaFun);
@@ -558,7 +560,9 @@ function _init(data, info) {
             document.getElementById("ForPagAgencia").setAttribute("value", ForPagAgencia);
             document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
             document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
-            
+
+            document.getElementById("SupAproJusti").setAttribute("value", SupAproJusti);
+
             selecionaTipoFormulario()
             ExibeBoleto()
             ExibirFormaPagamento()
@@ -659,6 +663,8 @@ function _saveData(data, info) {
     newData.ForPagAgencia = document.getElementById("ForPagAgencia").value;
     newData.ForPagConta = document.getElementById("ForPagConta").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
+
+    newData.SupAproJusti = document.getElementById("SupAproJusti").value;
 
     console.log(newData);
     return {
