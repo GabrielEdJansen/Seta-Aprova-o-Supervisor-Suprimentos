@@ -706,6 +706,16 @@ function _saveData(data, info) {
 
     newData.SupAproJusti = document.getElementById("SupAproJusti").value;
 
+    let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
+    let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
+
+    if (CheckIntegraTitulo == true) {
+        newData.AprovSup = "S";
+    }
+    if (CheckNaoIntegraTitulo == true) {
+        newData.AprovSup = "N";
+    }
+
     console.log(newData);
     return {
         formData: newData,
