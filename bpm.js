@@ -610,6 +610,11 @@ function _init(data, info) {
 
 // Essa função é chamada quando o usuário clicar no botão 'Enviar'
 function _saveData(data, info) {
+
+    if (!isFormValid()) {
+        throw new Error("Ainda falta ser preenchidos alguns campos");
+    }
+
     let newData = {};
 
     let selectForm = document.getElementById("selectTipFor");
