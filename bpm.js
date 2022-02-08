@@ -1,3 +1,42 @@
+function VerificaSeMotivoEstaPreenchido() {
+    let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
+    let MotivoReprovacaoVazio = document.getElementById('SupAproJusti').value
+    let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
+
+
+    if ((MotivoReprovacaoVazio != '') && (CheckNaoIntegraTitulo == false)) {
+        document.querySelector('#CheckNaoIntegraTitulo').checked = true;
+    }
+
+    if ((MotivoReprovacaoVazio != '') && (CheckIntegraTitulo == true)) {
+        document.getElementById('SupAproJusti').value = '';
+        document.querySelector('#CheckIntegraTitulo').checked = true;
+    }
+}
+
+function isFormValid() {
+    var retornaResultado = 0
+    let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
+    let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
+
+    var isNullSupAproJusti = document.getElementById("SupAproJusti").value;
+    if ((isNullSupAproJusti == '') && (CheckNaoIntegraTitulo == true)) {
+        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+    } else {
+        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
+        retornaResultado++
+    }
+    if(CheckNaoIntegraTitulo = true){
+        var TotalCampos = 1
+    }else{
+        var TotalCampos = 0  
+    }
+
+    if (TotalCampos == retornaResultado) {
+        return true
+    }
+}
+
 function exibiParcelasComValorAcimaDeZero() {
 
     if (document.getElementById("VlrParDois").value == 0) {
