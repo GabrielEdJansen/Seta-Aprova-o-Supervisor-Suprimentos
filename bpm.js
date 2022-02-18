@@ -156,7 +156,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela2Bol');
 
         eBol.style.display = 'none';
-    }  
+    }
 
     if (document.getElementById("VlrParTres").value == 0) {
         let eBol3 = document.getElementById('parcela3');
@@ -166,7 +166,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela3Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParQuatro").value == 0) {
         let eBol4 = document.getElementById('parcela4');
@@ -176,7 +176,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela4Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParCinco").value == 0) {
         let eBol5 = document.getElementById('parcela5');
@@ -186,7 +186,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela5Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParSeis").value == 0) {
         let eBol6 = document.getElementById('parcela6');
@@ -196,7 +196,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela6Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParSete").value == 0) {
         let eBol7 = document.getElementById('parcela7');
@@ -206,7 +206,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela7Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParOito").value == 0) {
         let eBol8 = document.getElementById('parcela8');
@@ -216,7 +216,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela8Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParNove").value == 0) {
         let eBol9 = document.getElementById('parcela9');
@@ -226,7 +226,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela9Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParDez").value == 0) {
         let eBol10 = document.getElementById('parcela10');
@@ -236,7 +236,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela10Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParOnze").value == 0) {
         let eBol11 = document.getElementById('parcela11');
@@ -246,7 +246,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela11Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
     if (document.getElementById("VlrParDoze").value == 0) {
         let eBol12 = document.getElementById('parcela12');
@@ -256,7 +256,7 @@ function exibiParcelasComValorAcimaDeZero() {
         let eBol = document.getElementById('parcela12Bol');
 
         eBol.style.display = 'none';
-    } 
+    }
 
 }
 
@@ -267,6 +267,7 @@ function selecionaTipoFormulario() {
 
         eVal.style.display = 'flex';
 
+       // document.getElementById("DatPre").value = ''
     }
     if (document.getElementById("selectTipFor").value == 'Pagamento') {
 
@@ -716,7 +717,6 @@ function _init(data, info) {
 
 // Essa função é chamada quando o usuário clicar no botão 'Enviar'
 function _saveData(data, info) {
-
     if (!isFormValid()) {
         throw new Error("Ainda falta ser preenchidos alguns campos");
     }
@@ -829,7 +829,6 @@ function _saveData(data, info) {
         newData.AprovSup = "N";
         newData.cancelarSolicitacao = "N";
     }
-
     if (CheckCancelaIntegraTitulo == true) {
         newData.cancelarSolicitacao = "S";
     }
