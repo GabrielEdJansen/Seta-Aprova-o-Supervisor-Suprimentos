@@ -128,6 +128,15 @@ function isFormValid() {
     let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
     let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
     let CheckCancelaIntegraTitulo = document.querySelector('#CheckCancelaIntegraTitulo').checked
+    var nNaoProssegue = 0
+
+    if((CheckIntegraTitulo == false) &&(CheckCancelaIntegraTitulo == false) && (CheckNaoIntegraTitulo == false)){
+        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");   
+        nNaoProssegue = 1
+    }
+
 
     var isNullSupAproJusti = document.getElementById("SupAproJusti").value;
     if ((isNullSupAproJusti == '') && (CheckNaoIntegraTitulo == true)) {
@@ -142,14 +151,9 @@ function isFormValid() {
         var TotalCampos = 0  
     }
 
-
-    if((CheckIntegraTitulo == false) &&(CheckCancelaIntegraTitulo == false) && (CheckNaoIntegraTitulo == false)){
-        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");   
-        retornaResultado = 0 
+    if(nNaoProssegue == 1){
+        TotalCampos  = 500;  
     }
-
 
     if (TotalCampos == retornaResultado) {
         return true
