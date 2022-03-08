@@ -1,9 +1,3 @@
-/*function funçãoQueSeráExecutada() {
-    document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    document.getElementById("CheckNaoIntegraTitulo").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-    document.getElementById("CheckCancelaIntegraTitulo").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-}*/
-
 function preencheCnpjEmp() {
 
     var CodEmp = document.getElementById("selectEmpFil").value
@@ -137,9 +131,9 @@ function isFormValid() {
     var nNaoProssegue = 0
 
     if ((CheckIntegraTitulo == false) && (CheckCancelaIntegraTitulo == false) && (CheckNaoIntegraTitulo == false)) {
-        document.getElementById("CheckIntegraTitulo").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        document.getElementById("CheckNaoIntegraTitulo").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
-        document.getElementById("CheckCancelaIntegraTitulo").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
+        document.getElementById("CheckIntegraTitulo").setAttribute("class", "form-check-input is-invalid");
+        document.getElementById("CheckNaoIntegraTitulo").setAttribute("class", "form-check-input is-invalid");
+        document.getElementById("CheckCancelaIntegraTitulo").setAttribute("class", "form-check-input is-invalid");
         nNaoProssegue = 1
     }
 
