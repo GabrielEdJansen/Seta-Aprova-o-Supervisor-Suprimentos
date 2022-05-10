@@ -296,11 +296,6 @@ function ExibeBoleto() {
 
         document.getElementById("ForPagChavePix").value = ''
 
-        document.getElementById("ForPagBanco").value = ''
-        document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''
-
-
         if (document.getElementById("VlrParUm").value != 0) {
 
             let eBol1 = document.getElementById('parcela1Bol');
@@ -405,21 +400,9 @@ function ExibirFormaPagamento() {
         document.getElementById("CodBolOnze").value = ''
         document.getElementById("CodBolDoze").value = ''
 
-        document.getElementById("ForPagBanco").value = ''
-        document.getElementById("ForPagAgencia").value = ''
-        document.getElementById("ForPagConta").value = ''
-
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'flex';
-
-        let eVal = document.getElementById('PagBanco');
-
-        eVal.style.display = 'none';
-
-        let eVal1 = document.getElementById('PagBancoAge');
-
-        eVal1.style.display = 'none';
 
         let eBol1 = document.getElementById('parcela1Bol');
         eBol1.style.display = 'none';
@@ -464,15 +447,6 @@ function ExibirFormaPagamento() {
 
         document.getElementById("ForPagChavePix").value = ''
 
-
-        let eVal = document.getElementById('PagBanco');
-
-        eVal.style.display = 'flex';
-
-        let eVal1 = document.getElementById('PagBancoAge');
-
-        eVal1.style.display = 'flex';
-
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'none';
@@ -507,14 +481,6 @@ function ExibirFormaPagamento() {
         let eVal2 = document.getElementById('PagPix');
 
         eVal2.style.display = 'none';
-
-        let eVal = document.getElementById('PagBanco');
-
-        eVal.style.display = 'none';
-
-        let eVal1 = document.getElementById('PagBancoAge');
-
-        eVal1.style.display = 'none';
 
         ExibeBoleto()
     }
@@ -560,7 +526,6 @@ function _init(data, info) {
             const selectEmpFil = map.get("selectEmpFil");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
-            const FormPagTipTcc = map.get("FormPagTipTcc");
             const selectTipPix = map.get("selectTipPix");
             const DatSol = map.get("DatSol");
             const Fornec = map.get("Fornec");
@@ -634,9 +599,6 @@ function _init(data, info) {
             const CodBolDoze = map.get("CodBolDoze");
 
             const TotalPagarPar = map.get("TotalPagarPar");
-            const ForPagBanco = map.get("ForPagBanco");
-            const ForPagAgencia = map.get("ForPagAgencia");
-            const ForPagConta = map.get("ForPagConta");
             const ForPagChavePix = map.get("ForPagChavePix");
 
             document.getElementById("nomFun").setAttribute("value", nomFun);
@@ -644,7 +606,6 @@ function _init(data, info) {
             document.getElementById("selectEmpFil").value = selectEmpFil;
             document.getElementById("selectTipFor").value = selectTipFor;
             document.getElementById("selectFormPag").value = selectFormPag;
-            document.getElementById("FormPagTipTcc").value = FormPagTipTcc;
             document.getElementById("selectTipPix").value = selectTipPix;
             document.getElementById("DatSol").setAttribute("value", DatSol);
             document.getElementById("Fornec").setAttribute("value", Fornec);
@@ -717,9 +678,6 @@ function _init(data, info) {
             document.getElementById("CodBolDoze").setAttribute("value", CodBolDoze);
 
             document.getElementById("TotalPagarPar").setAttribute("value", TotalPagarPar);
-            document.getElementById("ForPagBanco").setAttribute("value", ForPagBanco);
-            document.getElementById("ForPagAgencia").setAttribute("value", ForPagAgencia);
-            document.getElementById("ForPagConta").setAttribute("value", ForPagConta);
             document.getElementById("ForPagChavePix").setAttribute("value", ForPagChavePix);
 
             selecionaTipoFormulario()
@@ -747,9 +705,6 @@ function _saveData(data, info) {
 
     let selectFormPagamento = document.getElementById("selectFormPag");
     newData.selectFormPag = selectFormPagamento.options[selectFormPagamento.selectedIndex].value;
-
-    let FormPagTipConta = document.getElementById("FormPagTipTcc");
-    newData.FormPagTipTcc = FormPagTipConta.options[FormPagTipConta.selectedIndex].value;
 
     let selectTipoPix = document.getElementById("selectTipPix");
     newData.selectTipPix = selectTipoPix.options[selectTipoPix.selectedIndex].value;
@@ -829,9 +784,6 @@ function _saveData(data, info) {
     newData.CodBolDoze = document.getElementById("CodBolDoze").value;
 
     newData.TotalPagarPar = document.getElementById("TotalPagarPar").value;
-    newData.ForPagBanco = document.getElementById("ForPagBanco").value;
-    newData.ForPagAgencia = document.getElementById("ForPagAgencia").value;
-    newData.ForPagConta = document.getElementById("ForPagConta").value;
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
 
     newData.SupAproJusti = document.getElementById("SupAproJusti").value;
