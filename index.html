@@ -293,35 +293,6 @@
       </select>
       <div class="invalid-feedback">*Campo Obrigatório</div>
     </div>
-    <!-- Banco -->
-      <div class="col-md-6">
-        <label for="ForPagBanco" class="form-label">Banco</label>
-        <input disabled type="text" id="ForPagBanco"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <script type="text/javascript">
-          $("#ForPagBanco").keypress(function (event) {
-            var character = String.fromCharCode(event.keyCode);
-            return isValid(character);
-          });
-        </script>
-        <div class="invalid-feedback">*Campo Obrigatório</div>
-      </div>
-    </div>
-    <!-- Agencia/Conta -->
-    <div class="row" id="PagBancoAge" style="display: flex;">
-      <div class="col-md-6">
-        <label for="ForPagAgencia" class="form-label">Agencia</label>
-        <input disabled id="ForPagAgencia" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <div class="invalid-feedback">*Campo Obrigatório</div>
-      </div>
-      <div class="col-md-6">
-        <label for="ForPagConta" class="form-label">Conta</label>
-        <input disabled id="ForPagConta" type="text"
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-        <div class="invalid-feedback">*Campo Obrigatório</div>
-      </div>
-    </div>
     <!-- Chave PIX -->
     <!--<div class="row" id="PagPix" style="display: flex;">
       <div class="col-md-6">
